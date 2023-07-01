@@ -9,6 +9,7 @@
 
 body {
   background-color: royalblue;
+  background-image: url("images/background.jpeg");
   margin: 0;
   padding: 0;
   color: white;
@@ -37,6 +38,12 @@ header nav ul {
     color: white;
     text-transform: uppercase;
     font-weight: 600;
+  }
+
+  @media screen and (max-width: 768px) {
+    header nav ul {
+      font-size: 1.2rem;
+    }
   }
   
 
