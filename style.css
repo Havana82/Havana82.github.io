@@ -46,4 +46,10 @@ header nav ul {
     }
   }
   
+  .profile{
+    width: 30vw;
+    min-width: 20vh;
+    height: 25vh;
+    border-radius: 20px;
+  }
 
