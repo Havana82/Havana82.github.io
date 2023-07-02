@@ -37,6 +37,7 @@ body {
     padding: 30px;
     width: 65%;
     height: fit-content;
+    display: block;
  
     
 
@@ -65,12 +66,18 @@ header nav ul {
       font-size: 1.2rem;
     }
   }
+  @media screen and (max-width: 768px) {
+    img{
+        display: none;
+    }
+  }
+
   
   .profile{
     width: 20vw;
     height: 70%;
     border-radius: 20px;
-    float: left;
+    /* float: left; */
     margin-top: 8vh;
    
   }
