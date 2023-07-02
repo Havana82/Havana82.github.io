@@ -332,16 +332,16 @@ body {
     padding: 0px 80px;
     align-items: center;
 }
-.section-about-image img {
-    width: 400px;
-    opacity: .5;
-}
+
 .section-about-texts {
-    text-align: start;
+    text-align: justify;
+    display: block;
+   
 }
 .section-about-texts p {
     line-height: 2rem;
     font-size: 30px;
+
 }
 /* section: about */
 
