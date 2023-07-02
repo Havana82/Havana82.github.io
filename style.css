@@ -76,8 +76,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
     flex-wrap: wrap;
+ 
 }
 
 .column {
@@ -157,7 +158,13 @@ body {
 }
 /* section: portfolio */
 
-
+.tech-icon-img {
+    height: 75px;
+}
+#flask{
+    background-color: yellow;
+    border-radius: 15px;
+}
 /* section: contact */
 .section-contact {
     margin-top: 250px;
@@ -341,6 +348,7 @@ body {
 
 
 
+
 /* desktop */
 @media screen and (min-width: 768px) {
     .section-hero .hero-skill-heading:hover::after {
@@ -490,10 +498,7 @@ body {
         margin-top: 30px;
        
     }
-    .nav-full-screen .social-links {
-        margin-top: 30px;
-    
-    }
+  
     /* full screen navigation */
 
 
