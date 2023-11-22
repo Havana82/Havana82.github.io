@@ -25,7 +25,7 @@ body {
 
 
 .hover {
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(17, 213, 26);
     opacity: 0.3;
 }
 
@@ -69,9 +69,7 @@ header{
 a{
     color: #fff;
 }
-a:hover{
-    color: #21e513;
-}
+
 .heading-stroke-only {
     color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -257,7 +255,7 @@ a:hover{
     transition: 200ms;
 }
 .nav-link:hover {
-    color: #fff;
+    color: #28ea13;
 }
 
 
