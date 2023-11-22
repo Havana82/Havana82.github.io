@@ -1,48 +1,42 @@
-var cursor = document.querySelector('.cursor');
-var cursorinner = document.querySelector('.cursor2');
-var a = document.querySelectorAll('a');
-var button = document.querySelectorAll('button');
-
-document.addEventListener('mousemove', function (e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
-});
-
-document.addEventListener('mousemove', function (e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    cursorinner.style.left = x + 'px';
-    cursorinner.style.top = y + 'px';
-});
-
-document.addEventListener('mousedown', function () {
-    cursor.classList.add('click');
-    cursorinner.classList.add('cursorinnerhover')
-});
-
-document.addEventListener('mouseup', function () {
-    cursor.classList.remove('click')
-    cursorinner.classList.remove('cursorinnerhover')
-});
-
-a.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        cursor.classList.add('hover');
-    });
-    item.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-    });
+const navElements = document.querySelectorAll('nav-link')
+const sectionElements= document.querySelectorAll('.sections')
+let currentSection = 'section1';
+window.addEventListener('scroll', ()=>{
+    sectionElements.forEach(sectionElement=>{
+        if (window.scrollY >= sectionElement.offsetTop - sectionElement.clientHeight/2){
+            currentSection = sectionElement.id;
+        }
+    })
+    navElements.forEach(navElement=> {
+        if(navElement.href.includes(currentSection)){
+            navElement.classList.add('active');
+        }
+        else{
+            navElement.classList.remove('active');
+        }
+    })
 })
 
-button.forEach(item => {
-    item.addEventListener('mouseover', () => {
-        cursor.classList.add('hover');
+
+//  * End Helper Functions
+
+
+//  * Begin Main Functions
+// create scroll functionslity 
+ 
+navElements.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      sectionElements.forEach((element)=>{
+        if(link.href.includes(element.id)){
+            const target = element;
+            target.scrollIntoView({behavior:"smooth"});
+        }
+
+   
+      })
     });
-    item.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
-    });
-})
+  });
 
 
 

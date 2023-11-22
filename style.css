@@ -11,7 +11,9 @@
 
    
 }
-
+.active{
+  color: #21e513;
+}
 body {
     color: #fff;
     background-color: #04132c;
@@ -49,6 +51,7 @@ body {
 .section-technologies {
     margin-top: 25px;
     text-align: center;
+    padding-top: 10rem;
 }
 
 .section-headings {
@@ -63,7 +66,12 @@ body {
 header{
     position: fixed;
 }
-
+a{
+    color: #fff;
+}
+a:hover{
+    color: #21e513;
+}
 .heading-stroke-only {
     color: transparent;
     -webkit-text-stroke-width: 1px;
@@ -243,7 +251,7 @@ header{
 
 .nav-link {
     margin-right: 20px;
-    color: #888;
+  
     text-decoration: none;
     text-transform: uppercase;
     transition: 200ms;
