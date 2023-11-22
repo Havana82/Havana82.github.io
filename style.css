@@ -60,6 +60,9 @@ body {
     font-size: 6rem;
     font-weight: 900;
 }
+header{
+    position: fixed;
+}
 
 .heading-stroke-only {
     color: transparent;
