@@ -1,4 +1,4 @@
-const navElements = document.querySelectorAll('nav-link')
+const navElements = document.querySelectorAll('.nav-link')
 const sectionElements= document.querySelectorAll('.sections')
 let currentSection = 'section1';
 window.addEventListener('scroll', ()=>{
@@ -18,7 +18,7 @@ window.addEventListener('scroll', ()=>{
 })
 
 
-//  * End Helper Functions
+
 
 
 //  * Begin Main Functions
@@ -31,8 +31,26 @@ navElements.forEach((link) => {
         if(link.href.includes(element.id)){
             const target = element;
             target.scrollIntoView({behavior:"smooth"});
+            
+          
         }
+   
+      })
+    });
+  });
 
+
+  const fullNavElements = document.querySelectorAll('.nav-full-screen')
+  const fullSectionElements= document.querySelectorAll('.sections')
+fullNavElements.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      fullSectionElements.forEach((element)=>{
+        if(link.href.includes(element.id)){
+            const target = element;
+            target.scrollIntoView({behavior:"smooth"});
+         
+        }
    
       })
     });
